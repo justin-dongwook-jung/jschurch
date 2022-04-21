@@ -11,7 +11,14 @@
 </head>
 <body>
   <script>
-    window.location.href = "youtube://youtu.be/XO3nTZkTvnw"
+    let filter = "win16|win32|win64|mac|macintel";
+    let link = "youtu.be/XO3nTZkTvnw";
+    if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+      window.location.href = "youtube://"+link;
+    }
+    else{
+      window.location.href = "https://"+link;
+    }
   </script>
 </body>
 </html>
